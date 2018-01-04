@@ -9,6 +9,9 @@ describe('angular-five-playground App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    const navList = page.getNavigationList();
+    expect(navList.count()).toBe(2);
+    expect(navList.first().getText()).toBe('Home');
+    expect(navList.get(1).getText()).toBe('About');
   });
 });
