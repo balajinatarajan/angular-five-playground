@@ -11,6 +11,7 @@ import { TextService } from './text.service';
 import { AccountComponent } from './account/account.component';
 import { ReviewComponent } from './review/review.component';
 import { CompleteComponent } from './complete/complete.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CompleteComponent } from './complete/complete.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [TextService],
   bootstrap: [AppComponent]

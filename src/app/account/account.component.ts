@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-account',
@@ -8,9 +9,14 @@ import { Router } from "@angular/router";
 })
 export class AccountComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get('https://www.google.com')
+      .toPromise()
+      .then(response => {
+        console.log(response);
+      })
   }
 
   onBtnClick(event) {
