@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'flow/complete',
     component: CompleteComponent
+  },
+  {
+    path: 'flow-two',
+    loadChildren: 'app/test/test.module#TestModule'
   }
 ];
 
