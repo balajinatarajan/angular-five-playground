@@ -12,6 +12,7 @@ import { AccountComponent } from './account/account.component';
 import { ReviewComponent } from './review/review.component';
 import { CompleteComponent } from './complete/complete.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TestModule } from './test/test.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TestModule
   ],
   providers: [TextService],
   bootstrap: [AppComponent]
