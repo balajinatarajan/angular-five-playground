@@ -8,12 +8,18 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 import { TextService } from './text.service';
+import { AccountComponent } from './account/account.component';
+import { ReviewComponent } from './review/review.component';
+import { CompleteComponent } from './complete/complete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    AccountComponent,
+    ReviewComponent,
+    CompleteComponent
   ],
   imports: [
     BrowserModule,
