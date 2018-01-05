@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/text', function(req, res) {
-  res.send('Account Found');
+  res.status(200);
+  res.send({ text: 'Account Found' });
 });
 
 console.log("Listening on port 4300");

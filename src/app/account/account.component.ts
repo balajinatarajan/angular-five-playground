@@ -11,18 +11,21 @@ export class AccountComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) { }
 
-  ngOnInit() {
-    this.http.get('https://www.google.com')
-      .toPromise()
-      .then(response => {
-        console.log(response);
-      })
-  }
+  ngOnInit() {}
 
   onBtnClick(event) {
-    console.log(event);
+    this.http.get('http://localhost:4300/text', )
+      .toPromise()
+      .then((response: any) => {
+        console.log(JSON.stringify(response));
+      })
+      .catch(error => {
+        console.log(error);
+      });
 
-    this.router.navigate(['about']);
+    // console.log(event);
+    //
+    // this.router.navigate(['about']);
   }
 
 }
